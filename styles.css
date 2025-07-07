@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --fonte: 'Space Mono';
+    --cor-verde-escuro: #00474B;
+    --cor-verde: #38B6AA;
+    --cor-verde-hover: #9FE8DF;
+    --cor-verde-claro: #F3F8FB;
+    --cor-de-titulo: #6C7E7E;
+    --cor-de-subtitulo: #9DBAB8;
+}
+
+body {
+    background-color: hsl(185, 41%, 84%);
+    font-family: var(--fonte);
+}
+
+article {
+    background-color: white;
+    color: var(--cor-de-titulo);
+    border-radius: 20px;
+    font-weight: bold;
+    display: flex;
+    gap: 20px;
+    margin: 30px 14%;
+    padding: 20px;
+}
+
+.calculadora {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0 20px 30px;
+}
+
+.calculadora__pessoas {
+    display: flex;
+    align-items: center;
+    background-color: var(--cor-verde-claro);
+    border: 2px solid transparent;
+    border-radius: 7px;
+    padding: 5px;
+    margin: 20px 0 10px 0;
+    width: 94%;
+    transition: border-color 0.1s ease;
+}
+
+.calculadora__conta {
+    display: flex;
+    align-items: center;
+    background-color: var(--cor-verde-claro);
+    border: 2px solid transparent;
+    border-radius: 7px;
+    padding: 5px;
+    margin: 20px 0 50px 0;
+    width: 94%;
+    transition: border-color 0.1s ease;
+}
+
+.calculadora__pessoas img,
+.calculadora__conta img {
+    width: 15px;
+    height: auto;
+    margin-left: 10px;
+}
+
+.calculadora__pessoas__input,
+.calculadora__conta__input {
+    flex: 1;
+    background-color: transparent;
+    border: none;
+    text-align: right;
+    font-family: var(--fonte);
+    font-weight: bold;
+    font-size: 24px;
+    outline: none;
+    color: var(--cor-de-subtitulo);
+}
+
+.calculadora__conta:focus-within,
+.calculadora__pessoas:focus-within {
+  border-color: var(--cor-verde);
+}
+
+.calculadora-erro {
+    border: 2px solid red;
+}
+
+.calculadora div {
+    display: flex;
+}
+
+.calculadora__texto-erro-conta{
+    padding-left: 54%;
+    color: transparent;
+}
+
+.calculadora__texto-erro-pessoas {
+    padding-left: 27%;
+    color: transparent;
+}
+
+.calculadora__texto-erro-ativo {
+    color: red;
+}
+
+.calculadora__custom {
+    background-color: var(--cor-verde-claro);
+    color: var(--cor-dos-ícones);
+    border: none;
+    border-radius: 7px;
+    text-align: center;
+    font-family: var(--fonte);
+    font-size: 24px;
+    font-weight: bold;
+    width: 29%;
+    padding: 7px 0 8px 15px;
+    margin-bottom: 45px;
+    outline-color: var(--cor-verde);
+}
+
+.calculadora__custom-erro {
+    outline: 2px solid red;
+}
+
+.calculadora__custom::placeholder,
+.calculadora__pessoas__input::placeholder,
+.calculadora__conta__input::placeholder {
+    color: var(--cor-de-subtitulo);
+}
+
+.calculadora__porcentagem {
+    background-color: var(--cor-verde-escuro);
+    color: white;
+    border: none;
+    border-radius: 7px;
+    font-family: var(--fonte);
+    font-weight: bold;
+    font-size: 24px;
+    margin: 15px 5px 0 0;
+    padding: 7px 9%;
+}
+
+.calculadora__porcentagem-5 {
+    background-color: var(--cor-verde-escuro);
+    color: white;
+    border: none;
+    border-radius: 7px;
+    font-family: var(--fonte);
+    font-weight: bold;
+    font-size: 24px;
+    margin-right: 5px;
+    padding: 7px 11%;
+}
+
+.calculadora__porcentagem:hover,
+.calculadora__porcentagem-5:hover {
+    background-color: var(--cor-verde-hover);
+    color: var(--cor-verde-escuro);
+}
+
+.botao-ativo {
+    background-color: var(--cor-verde);
+    color: var(--cor-verde-escuro);
+}
+
+.resultado {
+  background-color: var(--cor-verde-escuro);
+  border-radius: 20px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.resultado__conta,
+.resultado__gorjeta {
+    display: flex;
+    justify-content: space-between;
+    width: 100%
+}
+
+.resultado__conta__texto,
+.resultado__gorjeta__texto {
+    color: var(--cor-verde-claro);
+    padding: 50px 0 0 40px;
+    white-space: nowrap;
+}
+
+.resultado__conta__texto p,
+.resultado__gorjeta__texto p {
+    color: var(--cor-de-titulo);
+    white-space: nowrap;
+}
+
+.resultado__conta h1,
+.resultado__gorjeta h1 {
+    color: var(--cor-verde);
+    font-size: 50px;
+    padding: 50px 40px 0 0;
+}
+
+.resultado__reset {
+    background-color: #0D686D;
+    color: #035C62;
+    border: none;
+    border-radius: 7px;
+    font-family: var(--fonte);
+    font-weight: bold;
+    font-size: 20px;
+    padding: 10px 145px;
+    margin: 120px 40px 40px 38px;
+}
+
+.resultado__reset-ativo {
+    background-color: var(--cor-verde);
+    color: var(--cor-verde-escuro);
+    border: none;
+    border-radius: 7px;
+    font-family: var(--fonte);
+    font-weight: bold;
+    font-size: 20px;
+    padding: 10px 145px;
+    margin: 120px 40px 40px 38px;
+}
+
+.resultado__reset-ativo:hover {
+    background-color: var(--cor-verde-hover);
+    color: var(--cor-verde-escuro);
+}
+
+.attribution {
+    font-family: var(--fonte-texto);
+    text-align: center;
+}
+
+.frontendmentor {
+    color: black;
+}
+
+@media (max-width: 1275px) {
+    article {
+        justify-content: space-between;
+        margin: 30px 6%;
+    }
+
+    .calculadora__custom {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 1045px) {
+    article {
+        margin: 30px 0;
+    }
+
+    .calculadora__porcentagem {
+        padding: 7px 7%;
+    }
+
+    .calculadora__porcentagem-5 {
+        padding: 7px 9%;
+    }
+}
+
+@media (max-width: 890px) {
+    article {
+        flex-direction: column;
+    }
+
+    .calculadora__custom {
+        width: 25%;
+        padding: 12px 0 12px 10px;
+    }
+}
+ 
+@media (max-width: 475px) {
+
+    .calculadora {
+        padding: 20px 0 20px 5px;
+    }
+
+    .calculadora__custom {
+        font-size: 17px;
+    }
+
+    .calculadora__pessoas__input,
+    .calculadora__conta__input {
+        width: 90%;
+    }
+
+    .resultado__reset {
+        padding: 10px 100px;
+    }
+
+    .resultado__reset-ativo {
+        padding: 10px 100px;
+    }
+}

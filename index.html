@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css">
+  
+  <title>Frontend Mentor | Tip calculator app</title>
+</head>
+<body>
+  <article>
+    <section class="calculadora">
+      <div>
+        <p>Bill</p>
+        <p class="calculadora__texto-erro-conta">Can't be zero</p>
+      </div>
+      <section class="calculadora__conta">
+        <img src="images/icon-dollar.svg" alt="símbolo do dolar">
+        <input class="calculadora__conta__input" type="number" placeholder="0">
+      </section>
+      Select Tip %
+      <section>
+        <button class="calculadora__porcentagem-5">5%</button>
+        <button class="calculadora__porcentagem">10%</button>
+        <button class="calculadora__porcentagem">15%</button>
+      </section>
+      <section>
+        <button class="calculadora__porcentagem">25%</button>
+        <button class="calculadora__porcentagem">50%</button>
+        <input class="calculadora__custom" type="number" placeholder="Custom">
+      </section>
+      <div>
+        <p>Number of People</p>
+        <p class="calculadora__texto-erro-pessoas">Can't be zero</p>
+      </div>
+      <section class="calculadora__pessoas">
+        <img src="images/icon-person.svg" alt="ícone de uma pessoa">
+        <input class="calculadora__pessoas__input" type="number" placeholder="0">
+      </section>
+    </section>
+    <section class="resultado">
+      <div class="resultado__gorjeta">
+        <div class="resultado__gorjeta__texto">
+          <span>Tip Amount</span>
+          <p>/ person</p>
+        </div>
+        <h1 id="valor-gorjeta">$0.00</h1>
+      </div>
+      <div class="resultado__conta">
+        <div class="resultado__conta__texto">
+          <span>Total</span>
+          <p>/ person</p>
+        </div>
+        <h1 id="valor-conta">$0.00</h1>
+      </div>
+      <button class="resultado__reset">RESET</button>
+    </section>
+  </article>  
+  <div class="attribution">
+    <p>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <strong>João Vitor Bastos dos Santos</strong>.</p>
+  </div>
+<script src="index.js"></script>
+</body>
+</html>
